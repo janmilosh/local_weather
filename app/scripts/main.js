@@ -66,12 +66,12 @@ var vm = new Vue({
   methods: {
     getWeather: function() {
       var that = this;
-      if ("geolocation" in navigator) {
+      if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition(function(position) {
           that.callWeatherApi(position);
         });
       } else {
-        console.log("Geolocation is unavailable in this browser.")
+        console.log('Geolocation is unavailable in this browser.')
       }
     },
     callWeatherApi: function(position) {
