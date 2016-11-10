@@ -1,0 +1,91 @@
+$icon-font-path: '../fonts/';
+
+
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+$fontColor: #92b5ce;
+$background: #0f101f;
+$selected: #0077cc;
+$notSelected: #aaa;
+
+html, body, #weather {
+  height: 100%;
+}
+
+body {
+  background: $background;
+}
+
+h1, h2, h3, h4, p {
+  font-family: 'Varela Round', sans-serif;
+  color: $fontColor;
+}
+
+p {
+  font-size: 100px;
+  text-align: center;
+}
+
+p.temp {
+  min-height: 142px;
+}
+
+p.description {
+  font-size: 60px;
+  min-height: 85px;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.weather-image {
+  display: block;
+  margin: 30px auto;
+  height: 150px;
+  width: 150px;
+  }
+
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.btn.left {
+  border-radius: 4px 0 0 4px;
+  border: none;
+}
+
+.btn.right {
+  border-radius: 0 4px 4px 0;
+  position: relative;
+  right: 5px;
+  border: none;
+}
+
+.btn.right.btn-success,
+.btn.left.btn-success {
+  background: $selected;
+}
+
+.btn.right.btn-default,
+.btn.left.btn-default {
+  background: $notSelected;
+  color: white;
+}
+
+.btn:focus, .btn:active:focus {
+  outline: none;
+}

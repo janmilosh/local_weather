@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <title>local_weather</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div id="weather">
+      <div class="buttons">
+        <button v-on:click="{isFahrenheit=false}" v-bind:class="celciusClasses" class="btn left">&deg;C</button>
+        <button v-on:click="{isFahrenheit=true}" v-bind:class="fahrenheitClasses" class="btn right">&deg;F</button>
+      </div>
+      <div class="flex-wrapper">
+        <div class="weather">
+          <p class="temp" v-show="isFahrenheit">{{ tempFahrenheit }}&deg;F</p>
+          <p v-show="!isFahrenheit">{{ tempCelcius }}&deg;C</p>
+          <p class="description">{{ description | capitalize }}</p>
+          <img class="weather-image" v-bind:src="iconUrl" v-bind:alt="description" />
+        </div> 
+      </div> 
+    </div>
+        
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <script src="https://unpkg.com/vue@2.0.4/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-resource@1.0.3/dist/vue-resource.min.js"></script>
+    
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
