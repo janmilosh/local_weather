@@ -65,11 +65,18 @@ var vm = new Vue({
   },
   methods: {
     getWeather: function() {
-      this.$http.get('http://freegeoip.net/json/').then(this.callWeatherApi, this.handleError);
+      var this = this;
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          this.callWeatherApi(position);
+        });
+      } else {
+        console.log("Geolocation is unavailable in this browser.")
+      }
     },
-    callWeatherApi: function(response) {
-      this.lat = response.body.latitude;
-      this.lon = response.body.longitude;
+    callWeatherApi: function(position) {
+      this.lat = position.coords.latitude;
+      this.lon = position.coords.longitude;
       var key = 'd20c1eb3064a44aa39bc1a78bb8ff139',
           url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + this.lat + '&lon=' + this.lon + '&appid=' + key;
       this.$http.get(url).then(this.setTempAndDescription, this.handleError);      
