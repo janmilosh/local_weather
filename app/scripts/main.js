@@ -1,21 +1,21 @@
 var icons = {
-  '01n': 'http://res.cloudinary.com/imagine393/image/upload/v1478396096/moon-1_xdudv4.png',
-  '01d': 'http://res.cloudinary.com/imagine393/image/upload/v1478396100/sunny_mnl6fl.png',
-  '02d': 'http://res.cloudinary.com/imagine393/image/upload/v1478396095/clouds-1_pim37v.png',
-  '02n': 'http://res.cloudinary.com/imagine393/image/upload/v1478396096/cloudy-night_lmrh4p.png',
-  '03d': 'http://res.cloudinary.com/imagine393/image/upload/v1478396095/clouds_en8axb.png',
-  '03n': 'http://res.cloudinary.com/imagine393/image/upload/v1478396095/clouds_en8axb.png',
-  '04d': 'http://res.cloudinary.com/imagine393/image/upload/v1478396095/clouds_en8axb.png',
-  '04n': 'http://res.cloudinary.com/imagine393/image/upload/v1478396095/clouds_en8axb.png',
-  '09d': 'http://res.cloudinary.com/imagine393/image/upload/v1478396099/raining_o7s9kl.png',
-  '09n': 'http://res.cloudinary.com/imagine393/image/upload/v1478396098/night-rain_tuxr2f.png',
-  '10d': 'http://res.cloudinary.com/imagine393/image/upload/v1478396101/summer-rain_uj570x.png',
-  '10n': 'http://res.cloudinary.com/imagine393/image/upload/v1478396100/stars_qwbwlq.png',
-  '11d': 'http://res.cloudinary.com/imagine393/image/upload/v1478396095/bolt_fmcify.png',
-  '11n': 'http://res.cloudinary.com/imagine393/image/upload/v1478396095/bolt_fmcify.png',
-  '13d': 'http://res.cloudinary.com/imagine393/image/upload/v1478396099/snowflake_pmdb0d.png',
-  '13n': 'http://res.cloudinary.com/imagine393/image/upload/v1478396099/snowflake_pmdb0d.png',
-  'noCode': 'http://res.cloudinary.com/imagine393/image/upload/v1478396099/stars-2_nulyic.png'
+  '01n': 'images/moon-1.png',
+  '01d': 'images/sunny.png',
+  '02d': 'images/clouds-1.png',
+  '02n': 'images/cloudy-night.png',
+  '03d': 'images/clouds.png',
+  '03n': 'images/clouds.png',
+  '04d': 'images/clouds.png',
+  '04n': 'images/clouds.png',
+  '09d': 'images/raining.png',
+  '09n': 'images/night-rain.png',
+  '10d': 'images/summer-rain.png',
+  '10n': 'images/stars.png',
+  '11d': 'images/bolt.png',
+  '11n': 'images/bolt.png',
+  '13d': 'images/snowflake.png',
+  '13n': 'images/snowflake.png',
+  'noCode': 'images/stars-2.png'
 }
 
 var vm = new Vue({
